@@ -1,1 +1,15 @@
-<h1>Allo Allo!s</h1>
+<h1>Small URL</h1>
+
+{% for message in get_flashed_messages() %}
+<h2>{{ message }}</h2>
+{% endfor %}
+
+<form action="your-url" method="POST">
+    <label for="url">Website URL</label>
+    <input type="url" name="url" value="" required>
+    <br>
+    <label for="code">Short URL</label>
+    <input type="text" name="code" value="" required>
+    <br>
+    <input type="submit" value="shorten">
+</form>
